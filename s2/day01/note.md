@@ -34,3 +34,4 @@
 4. 嵌套列表
 
 # 5. 图像
+<img src="" [alt=""] [title=""] [width=""] [height=""]/>
