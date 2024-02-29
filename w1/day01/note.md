@@ -17,3 +17,21 @@
 1. div和span【重点】
 2. 标题标记 h1 ~ h6
 3. 段落 p  属性align  left、center、right
+	扩展：字体font
+4. br hr s/del b i u sup sub pre
+5. 小于、大于、& 、空格 转义字符
+
+# 4. 列表【重要】
+1. 有序列表 ol 列表项 li    ol>li
+2. 无序列表 ul 列表项 li  type
+3. 定义列表 dl 条码（标题) dt  描述 dd
+4. 【重要，考试】嵌套列表
+
+# 5. 图像
+<img src="路径" [alt=""] [title=""] [width=""] [height=""]/>
+1. 路径（重要） 绝对路径、相对路径（同一目录、上一目录、下一目录）
+2. src
+3. alt（只有图像加载失败才显示）
+4. title
+5. width
+6. height
