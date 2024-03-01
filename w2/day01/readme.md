@@ -27,3 +27,17 @@
 	3. 颜色的标识方法【重点】
 4. 其他常用标记 br hr b i u s sub sup pre
 5. 转义字符
+
+# 4. 列表
+1. 有序列表 ol  li 属性type（1 a A i I）
+2. 无序列表 ul  li 属性type（disc circle square none）
+3. 定义列表
+4. 嵌套列表【重点，考试】 一定要注意二级列表的位置
+
+# 5. 图像
+1. 语法```<img src="" [alt=""] [title=""] [width=""] [height=""]/>```
+2. src路径【重要】
+	1. 绝对路径
+	2. 相对路径
+	3. 相对服务器路径
+3. 重要的属性  alt title width height
