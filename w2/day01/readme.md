@@ -19,3 +19,11 @@
 
 # 3. HTML常用标记
 1. div和span 块级元素和行内元素有什么区别？
+2. 标题h1 h2 h3 h4 h5 h6 块级元素
+3. 段落标记p 块级元素 属性align(left/right/center)
+	扩展：font
+	1. font标记 属性
+	2. 尺寸的表示方法【重点】
+	3. 颜色的标识方法【重点】
+4. 其他常用标记 br hr b i u s sub sup pre
+5. 转义字符
