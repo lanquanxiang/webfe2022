@@ -28,3 +28,8 @@
 3. input控件【考试，重点，编程题第一题10分】
 	``` <input type="" [name=""] [value=""] [id=""]/> ```
 	10种input类型：4个框 4个按钮 2个域
+4. 其他控件
+	1. button
+	2. select
+	3. textarea
+	4. fieldset、legend、lable
