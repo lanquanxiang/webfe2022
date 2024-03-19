@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			tr:first-child>td::after{
+				content: "表头";	
+			}
+			tr:nth-child(n+2)>td::after{  /* 0-1-3*/
+				content: "单元格1";	
+			}
+			tr+tr>td::after{   /* 0-0-4  */
+				content: "xxx";	
+			}
+			
+			tr:nth-child(2n){
+				background-color: skyblue;
+			}
+			tr:nth-child(odd){   /*even 偶数  odd== 2n+1奇数*/
+				background-color: orangered;
+			}
+		</style>
+	</head>
+	<body>
+		<table border="1" width="400" height="250" cellspacing="0">
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</body>
+</html>
