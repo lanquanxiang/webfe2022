@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			a::after{
+				content: "[点击下载]";
+			}
+			a[href$="doc"]::before{
+				content: url(img/word.png);
+			}
+			a[href$="pdf"]::before{
+				content: url(img/pdf.png);
+			}
+			a[href$="ppt"]::before{
+				content: url(./img/ppt.png);
+			}
+			a[href$="xls"]::before{
+				content: url(img/excel.png);
+			}
+		</style>
+	</head>
+	<body>
+		<a href="html.doc">html.doc</a>
+		<br>
+		<a href="css.doc">css.doc</a>
+		<br>
+		<a href="js.doc">js.doc</a>
+		<br>
+		<a href="x.pdf">x.pdf</a>
+		<br>
+		<a href="y.ppt">y.ppt</a>
+		<br>
+		<a href="v.xls">v.xls</a>
+		<br>
+	</body>
+</html>

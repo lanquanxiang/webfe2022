@@ -31,3 +31,17 @@
 3. 存在attr属性，且值以a开头  [attr^=a]
 4. 存在attr属性，且值以b结尾  [attr$=b]
 5. 存在attr属性，且值包含c    [attr*=c]
+## 4. 伪元素选择器
+1. ::after
+2. ::before   content:""  content:url()
+## 5. 链接伪类（某种特殊状态）
+1. :hover
+2. 爱恨原则
+## 6. 状态伪类
+1. :empty
+## 7. 结构伪类
+1. :nth-child()
+
+# 3. 优先级
+1. ！important > 行内 > id > class|伪类|属性 > 元素|伪元素 
+2. 计算权重（优先级）
