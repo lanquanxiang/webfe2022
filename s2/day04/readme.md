@@ -26,3 +26,14 @@
 6. background-position
 # 5. 列表
 1. list-style-type
+# 6. 表格
+1. border-collapse
+# 7. 鼠标（了解）
+1. cursor 关键词| url(),state
+
+# 8. 盒子模型（重点）
+1. 构成： 外边距、边框、内边距、元素内容
+2. 装饰顺序以及值的复制（上右下左）
+
+# 9. CSS定位 position（重点）
+1. 取值
