@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div:first-child{
+				font-style: italic;
+			}
+			div:first-child+div{
+				font-weight: 700;
+			}
+			div:nth-child(3){
+				font-size: 50px;
+			}
+			.d4{
+				font-family: "microsoft yahei";
+			}
+			div:nth-child(5){  /* 尽量不使用last-child*/
+				font:italic bold 50px "宋体";
+			}
+		</style>
+	</head>
+	<body>
+		<div>123</div>
+		<div>1234</div>
+		<div>12345</div>
+		<div class="d4">123456</div>
+		<div>12</div>
+	</body>
+</html>
