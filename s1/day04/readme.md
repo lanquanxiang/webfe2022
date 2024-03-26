@@ -26,3 +26,11 @@
 6. background-position:像素（具体位置） 关键词
 ## 5. 列表
 1. list-style-type
+## 6. 表格
+1. border-collapse:collapse
+## 7. 光标
+
+
+# 2. 盒子模型（掌握）
+1. 盒子模型的构成
+2. 装饰顺序和值的复制
