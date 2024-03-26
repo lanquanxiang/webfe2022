@@ -17,3 +17,12 @@
 7. text-shadow
 8. white-space:nowrap(处理空白符和默认换行的效果)
 9. text-overflow
+## 4. 背景
+1. background-color
+2. background-image
+3. background-repeat
+4. background-size
+5. background-attachment:fixed
+6. background-position:像素（具体位置） 关键词
+## 5. 列表
+1. list-style-type
