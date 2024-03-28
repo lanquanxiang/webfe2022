@@ -19,3 +19,14 @@
 6. text-decoration == u s
 7. text-transform 全部大写|小写|首字母大写
 8. text-shadow
+9. white-space
+10. text-overflow
+## 4. 背景
+1. background-color
+2. background-image 图像
+3. background-repeat 设置重复的方式
+4. background-size 背景图的大小
+5. background-attachment 固定背景 fixed
+6. background-position: x y;
+## 5. 列表
+1. list-style-type
