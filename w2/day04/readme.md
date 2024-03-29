@@ -18,3 +18,22 @@
 8. text-shadow 文本阴影
 9. white-space 处理空白符和换行的效果
 10. text-overflow 处理文本溢出
+## 4. 背景属性
+1. background-color
+2. background-image
+3. background-repeat
+4. background-size
+5. background-attachment:fixed
+6. background-position 背景的位置
+## 5. 列表
+1. list-style-type
+## 6. 表格
+1. border-collapse
+## 7. 鼠标光标
+
+# 2. 盒子模型
+## 1. 基础知识
+1. 盒子模型的构成
+2. 盒子模型的装饰顺序
+3. 盒子模型的值复制规则
+## 2. 常见属性
