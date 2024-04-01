@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title><style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+			}
+			div:first-child{
+				position: absolute;
+				z-index: 2;
+			}
+			div+div{
+				position: fixed;
+				z-index: 3;
+				left: 50px;
+				top: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="background-color: yellow;"></div>
+		<div style="background-color: blue;"></div>
+	</body>
+</html>
