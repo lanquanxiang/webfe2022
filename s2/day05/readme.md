@@ -6,3 +6,6 @@
 2. z-index 数值越大越在上层
 3. 浮动float
 4. 【面试】浮动会产生什么影响？如何清除浮动？
+# 2. 显示
+1. display
+2. visibility
