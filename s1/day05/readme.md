@@ -20,4 +20,4 @@
 2. visibility:hidden
 3. display:none
 # 4. CSS3
-1. 圆角
+1. 圆角border-radius
