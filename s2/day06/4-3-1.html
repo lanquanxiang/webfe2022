@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		
+		  function fun1(i){
+		    console.log("第"+i+"种:函数声明!");
+		  }
+		  fun1(1);
+		  ////////////////////////////
+		var fun2 = function(i){
+		  console.log("第"+i+"种:函数表达式!");
+		}
+		fun2(2);
+		////////////////////////////////////
+		var fun3 = new Function("i","console.log('第'+i+'种:构造函数!');")
+		fun3(3);
+		</script>
+	</body>
+</html>
