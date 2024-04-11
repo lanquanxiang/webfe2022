@@ -34,3 +34,5 @@
 
 # 2. CSS盒子模型
 1. 盒子模型的构成【掌握】
+	外边距margin 边框border 内边距padding 内容content
+2. 装饰顺序：上 右 下 左（值的赋值）
