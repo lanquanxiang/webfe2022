@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{filter: grayscale(100%) !important;}
+			div{
+				width: 200px;
+				height: 50px;
+				border: #000000 30px solid;
+				
+				border-image: url(img/border.png) 30 30 30 30;
+			}
+			div:nth-child(1){
+				border-image-repeat: stretch; /* 默认 */
+			}
+			div:nth-child(2){
+				border-image-repeat: repeat; /* 重复，从边的中点向两边重复 */
+			}
+			div:nth-child(3){
+				border-image-repeat: round; /* 四舍五入之后 图案可能会拉伸或压缩 */
+				height: 70px;
+			}
+			div:nth-child(4){
+				border-image-repeat: space; /* 使用完整图案，缝隙使用空白 */
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</body>
+</html>

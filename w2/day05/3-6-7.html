@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			@-webkit-keyframes fly{
+				from{
+					transform: translateX(0px) rotate(0deg);
+				}
+				to{
+					transform: translateX(300px) rotate(1800deg);
+				}
+			}
+			
+			img{
+				animation-name: fly;
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				animation-timing-function: ease-in-out; /* 设置速率为慢-快-慢 */
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/weapon.png" width="50px" >
+	</body>
+</html>
