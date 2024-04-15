@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h1></h1>
+		<script type="text/javascript">
+			var date = new Date(); //当前日期初始化
+			var year = date.getFullYear();
+			var mon = date.getMonth() + 1 ; //月是从0开始的
+			var day = date.getDate();
+			var h = date.getHours();
+			var m = date.getMinutes();
+			var s = date.getSeconds();
+			
+			document.querySelector("h1").innerHTML=year+"-"+mon+"-"+day+" "+h+":"+m+":"+s;
+		</script>
+	</body>
+</html>

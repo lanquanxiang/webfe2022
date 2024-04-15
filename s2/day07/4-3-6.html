@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form>
+			姓名：<input type="text" id="username" />
+			<br>
+			留言: <textarea rows="3" cols="40" id="msg"></textarea>
+			<br>
+			<input type="reset" value="重置" />
+			<input type="button" value="留言" onclick="fun()"/>
+			<hr >
+			<textarea rows="10" cols="70" id="res"></textarea>
+			<script type="text/javascript">
+			var msgs=[]
+				var fun=function(){
+					var username=document.getElementById("username").value;
+					var msg=document.getElementById("msg").value;
+					var cen="["+username+"]说："+msg+"";
+					msgs.unshift(cen)
+					if(msgs.length>10){
+						msgs.pop()
+					}
+					document.getElementById("res").value=msgs.join("\n")
+					
+				}
+			</script>
+		</form>
+	</body>
+</html>

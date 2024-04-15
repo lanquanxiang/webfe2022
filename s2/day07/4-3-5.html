@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div onclick="off()" style="text-align: center;">
+			<img src="img/off.png" width="100px" id="a">
+			<h2 id="b">点击开灯</h2>
+		</div>
+		<script type="text/javascript">
+			var s=0;
+			function off(){
+				var img=document.getElementById("a");
+				var str=document.getElementById("b");
+				if(s==0){
+					img.setAttribute("src","img/on.png");
+					str.innerHTML="灯亮了";
+					str.setAttribute("style","color: red;");
+					s=1;
+				}else{
+					img.setAttribute("src","img/off.png");
+					str.innerHTML="灯灭了";
+					str.setAttribute("style","color: #000000;");
+					s=0;
+				}
+			}
+		</script>
+	</body>
+</html>

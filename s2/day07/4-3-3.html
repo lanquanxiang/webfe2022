@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="fun()" style="color: red;">123</button>
+		
+		<script type="text/javascript">
+			var fun = function(){
+				var button = document.querySelector("button");
+				 var str = button.innerHTML;
+				 str = "<b>"+str+"</b>";
+				 button.innerHTML=str;
+			}
+		</script>
+	</body>
+</html>

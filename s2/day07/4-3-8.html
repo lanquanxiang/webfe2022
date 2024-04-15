@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function fun(){
+				var r=Math.floor(Math.random()*256);  /*随机0~n之间的值   随机m~n之间的值*/
+				var g=Math.floor(Math.random()*256);
+				var b=Math.floor(Math.random()*256);
+				document.querySelector("body").setAttribute("style","background-color:rgb("+r+","+g+","+b+");")
+				document.querySelector("span").innerHTML="rgb("+r+","+g+","+b+");"
+				
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="fun()">随机背景色</button>
+		<span>rgb(255,255,255)</span>
+	</body>
+</html>
