@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+		var msgs=[]
+			function fun1(){
+				msgs=[]
+				document.getElementById("name").value=""
+				document.getElementById("word").value=""
+				document.getElementById("words").value=""
+			}
+			function fun2(){
+				var name=document.getElementById("name").value
+				var word=document.getElementById("word").value
+				var str="["+name+"]说:"+word+""
+				msgs.unshift(str)
+				if(msgs.length>10){
+					msgs.pop()
+				}
+				document.getElementById("words").value=msgs.join("\n")
+			}
+		</script>
+	</head>
+	<body>
+		姓名：<input type="text" id="name"><br>
+		留言:<textarea rows="3" cols="30" id="word"></textarea><br>
+		<button onclick="fun1()">重置</button>
+		<button onclick="fun2()">留言</button>
+		<hr>
+		<textarea rows="10" cols="60" id="words"></textarea>
+	</body>
+</html>

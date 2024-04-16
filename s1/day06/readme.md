@@ -10,7 +10,7 @@
 2. 内嵌式：```<script></script>```
 3. 外链式:``<script src="url"></script>```
 ## 2. 使用
-1. 输出到控制台
+1. 输出到控制台 console.log()
 2. 输出到网页
 
 # 3. 变量及声明
@@ -48,8 +48,8 @@
 # 4. 函数及使用【重点】
 ## 1. 函数的声明
 function是一个函数，还是一个变量，还是一个对象。
-1. function关键字
-2. var、let来声明函数变量
+1. function关键字  function xxx(){}
+2. var、let来声明函数变量 var xxx = function(){}
 3. 使用Function()构造方法来构造
 ## 2. 函数的调用
 1. 立即执行函数表达式()
@@ -59,7 +59,7 @@ function是一个函数，还是一个变量，还是一个对象。
 
 # 5. 常用对象
 ## 1. element元素--html元素【重点，考试】
-1. 查询【考试】
+1. 查询【考试】 6种
 2. 修改
 	1. 修改文本 innerHTML（识别和执行html代码）/innerText（纯文本）属性
 	2. 修改属性

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			function fun(n){
+				let num1=document.getElementById("num1").value;
+				let num2=document.getElementById("num2").value;
+				if(isNaN(num1)||isNaN(num2)){
+					alert("输入内容非数字")
+					return;
+				}
+				var res = eval(num1+n+num2).toFixed(16)-0;
+				if(res==Infinity || isNaN(res)){
+					alert("计算结果为非数字或无穷");
+					return;
+				}
+				document.getElementById("num3").value=res;
+			
+			}
+		</script>
+	</head>
+	<body>
+		第一个数：<input type="text" id="num1"/><br>
+		第二个数：<input type="text" id="num2" /><br>
+				  <button type="button" onclick="fun('+')">+</button>
+				  <button type="button" onclick="fun('-')">-</button>
+				  <button type="button" onclick="fun('*')">*</button>
+				  <button type="button" onclick="fun('/')">/</button><br>
+		计算结果：<input type="text" id="num3"/>
+	</body>
+</html>

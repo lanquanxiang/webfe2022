@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var date = new Date() //初始化当前时间
+			var year = date.getFullYear();  //获取完整的年份  getYear() == 124
+			var month = date.getMonth()+1;  //0~11
+			var day = date.getDate();
+			
+			var h = date.getHours();
+			var m = date.getMinutes();
+			var s = date.getSeconds();
+			
+			var days = ["星期天","星期一","星期二","星期三","星期四","星期五","星期六"]
+			var time = year+"-"+month+"-"+day+" "+h+":"+m+":"+s+" "+days[date.getDay()];
+			document.write(time);
+			
+		</script>
+	</body>
+</html>

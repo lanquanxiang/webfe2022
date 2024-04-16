@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			function fun(n){
+				let num1=document.getElementById("num1").value;
+				let num2=document.getElementById("num2").value;
+				if(isNaN(num1)||isNaN(num2)){
+					alert("输入内容非数字")
+					return;
+				}
+				num1=num1-0
+				num2=num2-0
+				if(n==1){
+					res=num1+num2;
+					res = res.toFixed(16)-0; //精确到小数点后16位
+					document.getElementById("num3").value=res;
+					return;
+				}
+				if(n==2){
+					res=num1-num2;
+					document.getElementById("num3").value=res;
+					return;
+				}
+				if(n==3){
+					res=num1*num2;
+					document.getElementById("num3").value=res;
+					return;
+				}
+				if(n==4){
+					if(num2==0){
+						alert("除数不能等于0")
+						return;
+					}
+					res=num1/num2;
+					document.getElementById("num3").value=res;
+					return;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		第一个数：<input type="text" id="num1" /><br>
+		第二个数：<input type="text" id="num2" /><br>
+				  <button type="button" onclick="fun(1)">+</button>
+				  <button type="button" onclick="fun(2)">-</button>
+				  <button type="button" onclick="fun(3)">*</button>
+				  <button type="button" onclick="fun(4)">/</button><br>
+		计算结果：<input type="text" id="num3"/>
+	</body>
+</html>

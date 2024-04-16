@@ -5,26 +5,17 @@
 		<title></title>
 	</head>
 	<body>
-		<button id="button">按钮1</button>
-		<button class="button">按钮2</button>
-		<button name="button">按钮3</button>
-		<button>按钮4</button>
-		<button type="button">按钮5</button>
-		<button>按钮6</button>
-		
+		<button type="button" onclick="fun()" id="btn">按钮</button>
 		<script type="text/javascript">
-			var btn1=document.getElementById("button");
-			console.log(btn1);
-			var btn2=document.getElementsByClassName("button")[0];
-			console.log(btn2);
-			var btn3=document.getElementsByName("button")[0];
-			console.log(btn3);
-			var btn4 = document.getElementsByTagName('button')[3]
-			console.log(btn4);
-			var btn5 = document.querySelector('[type]')
-			console.log(btn5);
-			var btns = document.querySelectorAll('button+button')
-			console.log(btn6[4])
+			var fun=function(){
+				var btn=document.getElementById("btn")
+				var text=btn.innerText;
+				console.log(text);
+				var textB="<b>"+text+"</b>";
+				btn.innerText=textB; 
+				//btn.innerHTML=textB;
+			} 
 		</script>
+		
 	</body>
 </html>
