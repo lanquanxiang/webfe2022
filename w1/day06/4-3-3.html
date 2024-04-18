@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var fun = function(){
+				var btn = document.getElementById("btn");
+				var text = btn.innerText
+				text = "<b>"+text+"</b>"
+				//btn.innerHTML = text
+				btn.innerText = text
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="fun()" type="button" id="btn">按钮</button>
+	</body>
+</html>
