@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 3. 外部脚本 -->
+		<script src="js/my.js" type="text/javascript" charset="utf-8"></script>
+		
+	
+	</head>
+	<body>
+		<!--1.  行内脚本 -->
+		<button type="button" onclick="window.alert(1)">按钮</button>
+		<a href="javascript:alert(2);">超链接</a>
+		
+		
+		
+		<!-- 2. 内部脚本 -->
+		<script type="text/javascript">
+			console.log(3); //日志
+			console.error("错误消息");
+		</script>
+		
+		<script src="js/my.js" type="text/javascript" charset="utf-8">
+			//不能再外部script标签中写脚本代码
+		</script>
+	</body>
+</html>

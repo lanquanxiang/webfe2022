@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function fun(){
+				var b=document.getElementById("b1")
+				var s=b.innerHTML
+				s="<b>"+s+"</b>"
+				b.innerHTML=s
+			}
+		</script>
+	</head>
+	<body>
+		<button type="button" onclick="fun()" id="b1">1111</button>
+		
+		<input type="button" value="按钮"  onclick="fun2()"/>
+		<script type="text/javascript">
+			function fun2(){
+				var b2 = document.querySelector("input");
+				var s = b2.value;
+				s="<b>"+s+"</b>"
+				b2.value = s;
+				
+			}
+		</script>
+	</body>
+</html>
