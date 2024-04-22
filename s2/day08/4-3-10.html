@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			function fun1(){
+				var reg=/^[A-z]\w{2,14}$/
+				var name=document.getElementById("username").value
+				if(reg.test(name)){
+					document.getElementById("note1").innerHTML="ok"
+				}else{
+					document.getElementById("note1").innerHTML="error"
+				}
+			}
+			function fun2(){
+				var reg=/^1\d{10}$/
+				var name=document.getElementById("phone").value
+				if(reg.test(name)){
+					document.getElementById("note2").innerHTML="ok"
+				}else{
+					document.getElementById("note2").innerHTML="error"
+				}
+			}
+			function fun3(){
+				var reg=/^0\d{2,3}-?\d{7,8}$/
+				var name=document.getElementById("tel").value
+				if(reg.test(name)){
+					document.getElementById("note3").innerHTML="ok"
+				}else{
+					document.getElementById("note3").innerHTML="error"
+				}
+			}
+			function fun4(){
+				var reg=/^(0|([1-9]\d{0,14}))(\.\d{1,2})?$/
+				var name=document.getElementById("money").value
+				if(reg.test(name)){
+					document.getElementById("note4").innerHTML="ok"
+				}else{
+					document.getElementById("note4").innerHTML="error"
+				}
+			}
+		</script>
+	</head>
+	<body>
+		输入用户昵称：<input type="text" id="username"/>
+		<button type="button" onclick="fun1()">检测</button>
+		<span id="note1"></span><br>
+		输入手机号码：<input type="text" id="phone"/>
+		<button type="button" onclick="fun2()">检测</button>
+		<span id="note2"></span><br>
+		输入座机号码：<input type="text" id="tel"/>
+		<button type="button" onclick="fun3()">检测</button>
+		<span id="note3"></span><br>
+		输入存款金额：<input type="text" id="money"/>
+		<button type="button" onclick="fun4()">检测</button>
+		<span id="note4"></span><br>
+	</body>
+</html>

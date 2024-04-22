@@ -6,22 +6,29 @@
 	</head>
 	<body>
 		<h1></h1>
+		<button type="button" onclick="fun()">停止</button>
 		<script type="text/javascript">
+		
+		function time(){
 			var date = new Date(); //当前日期初始化
 			var year = date.getFullYear();
 			var mon = date.getMonth() + 1 ; //月是从0开始的
 			var day = date.getDate();
 			var h = date.getHours();
-			h = h<10?("0"+h) : h;
-			
+			h = h<10?("0"+h) : h;			
 			var m = date.getMinutes();
-			m = (m+"").length < 2 ? ("0"+m):m;
-			
-			var s = date.getSeconds();
-			
-			var days = ["星期天","星期一","星期二","星期三","星期四","星期五","星期六"]
-			
+			m = (m+"").length < 2 ? ("0"+m):m;			
+			var s = date.getSeconds();			
+			var days = ["星期天","星期一","星期二","星期三","星期四","星期五","星期六"]			
 			document.querySelector("h1").innerHTML= `${year}-${mon}-${day} ${h}:${m}:${s}` +days[date.getDay()];
+		}
+		
+		var id =  setInterval(time,1000)
+		
+		function fun(){
+			clearInterval(id);
+		}
+			
 		</script>
 	</body>
 </html>

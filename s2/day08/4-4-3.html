@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function fun(){
+				var fra = document.createDocumentFragment();
+				for (let i = 0; i < 10; i++) {
+					var div = document.createElement("div")
+					div.innerHTML=`这是文本${i+1}`
+					fra.appendChild(div)
+				}
+				document.querySelector("#con").appendChild(fra)
+				
+			}
+		</script>
+	</head>
+	<body>
+		<button type="button" onclick="fun()">添加</button>
+		<div id="con"></div>
+	</body>
+</html>
