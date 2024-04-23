@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<body>		
+		  <div id="con">
+		    <div>这是div的文本</div>
+		    这是没有标记的文本
+		    <!-- 这是注释 --></div>		
+		</body>
+		<script type="text/javascript">
+			var con=document.getElementById("con")
+			console.log(con.childNodes.length);
+			console.log(con.firstChild.nodeValue); //nodevalue只适用于文本节点
+			console.log(con.childNodes[1].firstChild.nodeValue); //nodevalue只适用于文本节点
+			console.log(con.parentNode);
+		</script>
+	</body>
+</html>

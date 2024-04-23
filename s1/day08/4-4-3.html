@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var fun=function(){
+				var f=document.createDocumentFragment();
+				for (let i = 0; i < 10; i++) {
+					var d=document.createElement("div");
+					d.innerHTML=`这是文本${i+1}`; //"这是文本"+(i+1)
+					f.appendChild(d);
+					}
+				document.getElementById("con").appendChild(f);
+				
+			}
+	
+		</script>
+	</head>
+	<body>
+		<button onclick="fun()">批量增加</button>
+		<div id="con"></div>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+		function fun1(){
+			var d=document.createElement("h4")
+			d.innerHTML="text";
+			document.getElementById("con").appendChild(d)
+		}
+		function fun2(){
+			var d=document.createElement("img")
+			d.setAttribute("src","img/ok.png")
+			document.getElementById("con").appendChild(d)
+			
+		}
+		var fun3=function(){
+			var c=document.getElementById("con").firstChild
+			c.parentNode.removeChild(c)
+		}
+		var fun4=function(){
+			var c=document.querySelector("button")
+			c.parentNode.removeChild(c)
+		}
+		</script>
+	</head>
+	<body>
+		<button onclick="fun1()">添加文本</button>
+		<button onclick="fun2()">添加图片</button>
+		<button onclick="fun3()">删除第一个孩子</button>
+		<button onclick="fun4()">删除第一个按钮</button>
+
+		<div id="con"></div>
+	</body>
+</html>

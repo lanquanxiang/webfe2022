@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var fun1 = function(){
+				var url = "https://www.pzhu.cn"
+				var name = "pzhu"
+				var f = "width = 600, height = 400, left = 200,top = 200"
+				w = open(url,name,f)
+			}
+			var w 
+			var fun2 = function(){
+				w.close()
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="fun1()">打开</button>
+		<button onclick="fun2()">关闭</button>
+	</body>
+</html>
