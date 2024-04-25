@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			function mun(){
+				var img=document.querySelector("img")
+				var txt=document.querySelector("h3")
+				if(s==0){
+					img.setAttribute("src","img/on.png")
+					txt.innerHTML="灯亮了"
+					txt.setAttribute("style","color: red;")
+					s=1
+				}
+				else{
+					img.setAttribute("src","img/off.png")
+					txt.innerHTML="灯灭了"
+					txt.setAttribute("style","color: black;")
+					s=0
+				}
+			}
+			var s=0;
+		</script>
+	</head>
+	<body>
+		<div onclick="mun()">
+			<img src="img/off.png" width="100px">
+			<h3>点击开灯</h3>
+		</div>
+	</body>
+</html>
