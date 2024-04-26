@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+		var count=0;
+			function fun(){
+				var img=document.querySelector("img")
+				var h=document.querySelector("h3")
+				count++
+				if(count%2==1){
+					img.setAttribute("src","img/on.png")
+					h.innerHTML="灯亮了"
+					h.setAttribute("style","color: red;")
+				}
+				else{
+					img.setAttribute("src","img/off.png")
+					h.innerHTML="灯灭了"
+					h.setAttribute("style","color: black;")
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div onclick="fun()" style="text-align: center;">
+			<img src="img/off.png"  width="200px" >
+			<h3>点击开灯</h3>
+		</div>
+	</body>
+</html>
