@@ -13,7 +13,7 @@
 			function load(){
 				cookies = document.cookie.split(";");  //将可能存在的多个cookie分割为数组
 				for (let i = 0; i < cookies.length; i++) {				
-					var cname = cookies[i].split("=")[0]	//将每个cookie的名字分割出来，比较				
+					var cname = cookies[i].trim().split("=")[0]	//将每个cookie的名字分割出来，比较				
 					if(cname=="username"){
 						 document.getElementById("username").value=cookies[i].split("=")[1]
 					}
