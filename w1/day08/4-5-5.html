@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>网页在<span>5</span>s后跳转到攀枝花学院！</h3>
+		<button type="button" onclick="fun()">停止</button>
+		
+		<script type="text/javascript">
+			var t = setTimeout(function(){
+				location.href = "https://www.pzhu.cn"
+			},5000)
+			var s = setInterval(function(){
+				var span = document.querySelector("span")
+				if(span.innerHTML>1){
+					span.innerHTML = span.innerHTML-1
+				}				
+			},1000)
+			
+			function fun(){
+				clearTimeout(t)
+				clearInterval(s)
+			}
+		</script>
+	</body>
+</html>

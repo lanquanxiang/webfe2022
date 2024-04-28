@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function fun1(){
+				var d=document.createElement("div")
+				d.innerHTML="文字节点"
+				document.getElementById("con").appendChild(d)
+			}
+			function fun2(){
+				var d=document.createElement("img")
+				d.setAttribute("src","img/ok.png")
+				document.getElementById("con").appendChild(d)
+			}
+			function fun3(){
+				var f=document.createDocumentFragment()
+				for (let i = 0; i < 10; i++) {
+					var d=document.createElement("div")
+					d.innerHTML="文字节点"
+					f.appendChild(d)
+				}
+				document.getElementById("con").appendChild(f)
+			}
+			function fun4(){
+				var con=document.getElementById("con")
+				con.removeChild(con.firstChild)
+			}
+			function fun5(){
+				var btn=document.querySelector("button")
+				btn.parentNode.removeChild(btn)
+			}
+		</script>
+	</head>
+	<body>
+		<button type="button" onclick="fun1()">添加文本</button>
+		<button type="button" onclick="fun2()">添加图片</button>
+		<button type="button" onclick="fun3()">批量添加</button>
+		<button type="button" onclick="fun4()">删除第一个元素</button>
+		<button type="button" onclick="fun5()">删除第一个按钮</button>
+		<div id="con"></div>
+	</body>
+</html>

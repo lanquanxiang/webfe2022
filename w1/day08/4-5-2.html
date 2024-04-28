@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function save(){
+				var name = document.getElementById("username").value;
+				var time = new Date(new Date().getTime()+7*24*60*60*1000).toGMTString();
+				document.cookie = `username=${name};expires=${time};`
+			}
+			var cookies = [];
+			function load(){
+				cookies = document.cookie.split(";");  //将可能存在的多个cookie分割为数组
+				for (let i = 0; i < cookies.length; i++) {				
+					var cname = cookies[i].split("=")[0]	//将每个cookie的名字分割出来，比较				
+					if(cname=="username"){
+						 document.getElementById("username").value=cookies[i].split("=")[1]
+					}
+				}
+			}
+		</script>
+	</head>
+	<body onload="load()">
+		姓名： <input type="text" id="username" onchange="save()" /> <br>
+		电话： <input type="text" id="tel" />
+	</body>
+</html>
