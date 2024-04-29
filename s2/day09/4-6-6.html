@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function init(){
+				var username=document.getElementById("username")
+				username.onchange=function(){
+					var div=document.querySelector("div")
+					div.innerHTML=`值被修改为:${username.value}`
+					
+				}
+				var div=document.querySelector("div")
+				div.addEventListener("copy",fun)
+			}
+		</script>
+	</head>
+	<body onload="init()">
+		姓名：<input type="text"  id="username"  onpaste="fun2()"/>
+		<hr >
+		<div id=""></div>
+	</body>
+	<script type="text/javascript">
+		
+		function fun(){
+			alert("不允许复制")
+			event.preventDefault()
+		}
+		function fun2(){
+			alert("不允许粘贴")
+			event.preventDefault()
+		}
+		
+	</script>
+</html>
