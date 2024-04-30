@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function fun1(){
+				document.getElementById("con").innerHTML="值被修改为："+document.getElementById("userName").value
+			}
+		</script>
+		
+		<script type="text/javascript">
+			function init(){
+				var div=document.getElementById("con")
+				div.oncopy=function(){
+					alert("不允许复制")
+					event.preventDefault()
+				}
+				var input=document.getElementById("userName");
+				input.addEventListener("paste",function(){
+					alert("不允许粘贴")
+					event.preventDefault()
+				})
+				console.log("网页内容已经加载完毕，事件已经绑定");
+			}
+		</script>
+		
+	</head >
+	<body onload="init()">
+		姓名:<input type="text" id="userName" onchange="fun1()"/>
+		<hr>
+		<div id="con"></div>
+		
+	</body>
+</html>

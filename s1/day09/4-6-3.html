@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				border: #000000 1px solid;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1" style="width: 200px; height: 200px;">
+			<div id="d2"style="width: 150px; height: 150px;">
+				<div id="d3"style="width: 100px; height: 100px;"></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var divs=document.querySelectorAll("div")
+			for (let i = 0; i < divs.length; i++) {
+				divs[i].addEventListener("click",function(){
+					console.log("捕获型"+event.currentTarget.id)
+					
+				},true)
+				divs[i].addEventListener("click",function(){
+					console.log("冒泡型"+event.currentTarget.id)
+					event.stopPropagation();
+				},false)
+			}
+		</script>
+	</body>
+</html>
