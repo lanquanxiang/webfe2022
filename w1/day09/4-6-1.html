@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			function fun2(){
+				var btn1=document.querySelector("button")
+				// 3. 获得按钮之后添加事件监听
+				btn1.addEventListener("click",fun1)
+			}
+			function fun1(){
+				console.log("按钮可以点击了");
+			}
+		</script>
+	</head>
+	<body>
+		<button>按钮</button>
+		<!-- 1. 直接在标签中书写 -->
+		<button onclick="fun2()">添加</button>
+		<button>移除</button>
+		<script type="text/javascript">
+			var btn3=document.querySelectorAll("button")[2]
+			// 2. 获得按钮之后为事件属性赋值
+			btn3.onclick=function(){
+				var btn1=document.querySelector("button")
+				btn1.removeEventListener("click",fun1)
+			}
+		</script>
+	</body>
+</html>
