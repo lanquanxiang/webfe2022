@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function fun1() {
+				let d = document.createElement("div")
+				d.innerHTML = "文字"
+				document.getElementById("con").appendChild(d)
+			}
+
+			function fun2() {
+				let d = document.createElement("img")
+				d.setAttribute("src", "img/ok.png")
+				document.getElementById("con").appendChild(d)
+			}
+
+			function fun3() {
+				let f = document.createDocumentFragment()
+				for (let i = 0; i < 10; i++) {
+					let d = document.createElement("div")
+					d.innerHTML = "文字"
+					f.appendChild(d)
+				}
+				document.getElementById("con").appendChild(f)
+			}
+			function fun4(){
+				let con=document.getElementById("con")
+				con.removeChild(con.firstChild)
+			}
+			function fun5(){
+				let btn=document.querySelector("button")
+				btn.parentNode.removeChild(btn)
+			}
+		</script>
+	</head>
+	<body>
+		<button type="button" onclick="fun1()">添加文本</button>
+		<button type="button" onclick="fun2()">添加图片</button>
+		<button type="button" onclick="fun3()">添加十个</button>
+		<!-- 1. 删除容器的第一个孩子 2. 删除网页中的第一个按钮 -->
+		<button type="button" onclick="fun4()">删除孩子</button>
+		<button type="button" onclick="fun5()">删除按钮</button>
+		<div id="con"></div>
+	</body>
+</html>

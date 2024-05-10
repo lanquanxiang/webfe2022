@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function fun1(){
+				alert("即将跳转")
+				window.location.href="https://www.pzhu.cn"
+			}
+			function fun2(){
+				var flg=confirm("是否跳转？")
+				if(flg==true){
+					window.location.href="https://www.pzhu.cn"
+				}
+			}
+			function fun3(){
+				var url=prompt("请输入网址","https://www.pzhu.cn--默认值")
+				//如果用户没有输入内容或者关闭了窗口， url==null
+				// url+"" 变成“null”
+				console.log(typeof url);
+				if(url+""!="null"){
+					window.location.href=url
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button type="button" onclick="fun1()">即将跳转</button>
+		<button type="button" onclick="fun2()">是否跳转</button>
+		<button type="button" onclick="fun3()">自定义跳转</button>
+	</body>
+</html>
