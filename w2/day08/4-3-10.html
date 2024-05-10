@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			function fun1(){
+				let reg=/^[A-z]\w{2,14}$/
+				let t=document.getElementById("t1").value
+				if (reg.test(t)){
+					document.querySelectorAll("span")[0].innerHTML="ok"
+				}else{
+					document.querySelectorAll("span")[0].innerHTML="error"
+					
+				}
+			}
+			function fun2(){
+				let reg=/^1\d{10}$/
+				let t=document.getElementById("t2").value
+				if (reg.test(t)){
+					document.querySelectorAll("span")[1].innerHTML="ok"
+				}else{
+					document.querySelectorAll("span")[1].innerHTML="error"
+					
+				}
+			}
+			function fun3(){
+				let reg=/(^0\d{3}-{0,1}\d{7}$)|(^0\d{2}-{0,1}\d{8}$)/
+				let t=document.getElementById("t3").value
+				if (reg.test(t)){
+					document.querySelectorAll("span")[2].innerHTML="ok"
+				}else{
+					document.querySelectorAll("span")[2].innerHTML="error"
+					
+				}
+			}
+			function fun4(){
+				let reg=/^(0|([1-9]\d{0,14}))(\.\d{1,2})?$/
+				let t=document.getElementById("t4").value
+				if (reg.test(t)){
+					document.querySelectorAll("span")[3].innerHTML="ok"
+				}else{
+					document.querySelectorAll("span")[3].innerHTML="error"
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		 用户：<input type="text" id="t1" /> 
+		<button type="button" onclick="fun1()">检测</button> <span ></span><br>
+		 手机：<input type="text" id="t2" />
+		 <button type="button" onclick="fun2()">检测</button> <span ></span><br>
+		 座机：<input type="text" id="t3" />
+		 <button type="button" onclick="fun3()">检测</button> <span ></span><br>
+		 存款：<input type="text" id="t4" />
+		 <button type="button" onclick="fun4()">检测</button> <span ></span><br>
+		 
+	</body>
+</html>
