@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				border: 1px black solid;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1" style="width: 300px;height: 300px;">d1
+			<div id="d2" style="width: 200px;height: 200px;">d2
+				<div id="d3" style="width: 100px;height: 100px;">
+					d3
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			let ds=document.querySelectorAll("div")
+			for (let i = 0; i < ds.length; i++) {
+				ds[i].addEventListener('click',fun1,true)
+				ds[i].addEventListener('click',fun2,false)
+			}
+			function fun1(){
+				console.log("捕获阶段"+event.currentTarget.id);
+				
+			}
+			function fun2(){
+				console.log("冒泡阶段"+event.currentTarget.id);
+				event.stopPropagation();
+			}
+		</script>
+	</body>
+</html>

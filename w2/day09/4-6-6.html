@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function fun1(){
+				let i=document.querySelector("input")
+				let d=document.querySelector("div")
+				d.innerHTML="文本框的值被修改为"+i.value
+				console.log(1);
+			}
+		</script>
+	</head>
+	<body>
+		姓名:<input type="text" onchange="fun1()"/>
+		<hr >
+		<div ></div>
+		<script type="text/javascript">
+			let d=document.querySelector("div")
+			d.oncopy=function(){
+				alert("不允许复制")
+				event.preventDefault()
+			}
+			let i=document.querySelector("input")
+			i.addEventListener("paste",function(){
+				alert("不允许粘贴")
+				event.preventDefault()
+			})
+		</script>
+	</body>
+</html>

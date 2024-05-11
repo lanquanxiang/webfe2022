@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			function fun2(){
+				console.log("第一个按钮可以点了");
+				var btn1=document.querySelectorAll("button")[0]
+				btn1.addEventListener('click',fun1,false)
+			}
+			function fun1(){
+				console.log("第一个按钮被点击了");
+			}
+			
+	
+		
+			function fun(){
+				console.log("页面加载完毕之后自动运行");
+			var btn3=document.querySelectorAll("button")[2]
+			btn3.onclick=fun3;
+			
+			}
+			function fun3(){
+				console.log("第一个按钮不可以点了");
+				var btn1=document.querySelectorAll("button")[0]
+				btn1.removeEventListener('click',fun1,false)
+			}
+		</script>
+		
+		
+	</head>
+	<body onload="fun()">
+		<button>按钮</button>
+		<button onclick="fun2()">添加</button>
+		<button>移除</button>
+		
+	</body>
+</html>
