@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			let colors = [];
+			function init() {
+				let xhr = new XMLHttpRequest();
+				xhr.open("get", "color.xml", true);//异步
+				xhr.send();
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						let data = xhr.responseXML;
+						colors=data.querySelectorAll("color")
+						let s=document.querySelector("select")
+						for (let i = 0; i < colors.length; i++) {
+							let color=colors[i].querySelector("name").innerHTML
+							s.options[i]=new Option(color)
+						}
+						let cva=colors[0].querySelector("value").innerHTML
+						document.body.setAttribute("style","background-color: "+cva+";")
+					}
+				}
+				
+			}
+			let index=0;
+			function fun(){
+				index=document.querySelector("select").selectedIndex
+				let cva=colors[index].querySelector("value").innerHTML
+				document.body.setAttribute("style","background-color: "+cva+";")
+			}
+		</script>
+	</head>
+	<body onload="init()">
+		选择颜色：<select onchange="fun()"></select>
+	</body>
+</html>

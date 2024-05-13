@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			let pros = [];
+			function init() {
+				let xhr = new XMLHttpRequest();
+				xhr.open("get", "city.json", true);//异步
+				xhr.send();
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						let data = xhr.responseText;
+						pros=JSON.parse(data)
+						
+						let ps=document.querySelector("select")
+						for (let i = 0; i < pros.length; i++) {
+							let pn=pros[i].pname
+							ps.options[i]=new Option(pn)
+						}
+						let cs =document.querySelector("select+select")
+						for (let i = 0; i < pros[0].cities.length; i++) {
+							let cn=pros[0].cities[i]
+							cs.options[i]=new Option(cn)
+						}
+					}
+				}
+				
+			}
+			function fun(){
+				let ps=document.querySelector("select")
+				let pro=pros[ps.selectedIndex]
+				let cs =document.querySelector("select+select")
+				cs.length=0 //设置下拉列表没有长度
+				//cs.options.length = 0// 设置下拉选项的个数为0
+				//cs.innerHTML = "" //设置下拉列表中间没有文本（没有option）
+				for (let i = 0; i < pro.cities.length; i++) {
+					let cn=pro.cities[i]
+					cs.options[i]=new Option(cn)
+				}
+			}
+		</script>
+	</head>
+	<body onload="init()">
+		请选择：<select onchange="fun()"></select>省
+		<select></select>市
+	</body>
+</html>
