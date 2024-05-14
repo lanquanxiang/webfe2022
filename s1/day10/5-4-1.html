@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			let pros=[]
+			function load(){
+				let xhr = new XMLHttpRequest();
+				xhr.open("GET", "city.json", false)
+				xhr.send()
+				let data = xhr.responseText
+				pros=JSON.parse(data)
+				let spro=document.querySelector("select")
+				let scity=document.querySelector("select+select")
+				for (let i = 0; i < pros.length; i++) {
+					spro.options[i]=new Option(pros[i].name)
+				}
+				for (let i = 0; i < pros[0].cities.length; i++) {
+					scity.options[i]=new Option(pros[0].cities[i])
+				}
+			}
+			function fun(){
+				let spro=document.querySelector("select")
+				let scity=document.querySelector("select+select")
+				let x=pros[spro.selectedIndex]
+				scity.options.length=0
+				/*
+				下拉列表.length = 0;
+				下拉列表.options.length = 0;
+				下拉列表.innerHTML = "";
+				*/
+				for (let i = 0; i < x.cities.length; i++) {
+					scity.options[i]=new Option(x.cities[i])
+				}
+			}
+		</script>
+	</head>
+	<body onload="load()">
+		请选择：<select onchange="fun()"></select>省<select ></select>市
+		
+	</body>
+</html>

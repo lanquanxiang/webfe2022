@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			let colors = []
+
+			function load() {
+				let xhr = new XMLHttpRequest();
+				xhr.open("GET", "color.xml", false)
+				xhr.send()
+				let data = xhr.responseXML
+				colors = data.querySelectorAll("color")
+				let s = document.querySelector("select")
+				for (let i = 0; i < colors.length; i++) {
+					let c = colors[i].querySelector("name").innerHTML
+					s.options[i]=new Option(c)
+				}
+				let c = colors[0].querySelector("value").innerHTML
+				document.body.setAttribute("style","background-color: "+c+";")
+			}
+			function change(){
+				let index = document.querySelector("select").selectedIndex
+				let c = colors[index].querySelector("value").innerHTML
+				document.body.setAttribute("style","background-color: "+c+";")
+			}
+		</script>
+	</head>
+	<body onload="load()">
+		请选择网页颜色：<select onchange="change()"></select>
+	</body>
+</html>
