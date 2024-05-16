@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			function fun1(){
+				//1. 创建核心对象XMLHttpRequest
+				let xhr = new XMLHttpRequest();
+				//2. 创建请求
+				xhr.open("GET","data.txt",false); //false同步请求
+				//3. 发送请求
+				xhr.send()
+				//4. 数据处理
+				let data = xhr.responseText
+				document.querySelector("span").innerHTML = data;
+			}
+			function fun2(){
+				//1. 创建核心对象XMLHttpRequest
+				let xhr = new XMLHttpRequest();
+				//2. 创建请求
+				xhr.open("GET","data.txt",true); //ture异步请求
+				//3. 发送请求
+				xhr.send()
+				//4. 数据处理
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						let data = xhr.responseText
+						document.querySelector("span").innerHTML = data;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		请求到的数据：<span></span><br>
+		<button type="button" onclick="fun1()">同步请求</button>
+		<button type="button" onclick="fun2()">异步请求</button>
+	</body>
+</html>

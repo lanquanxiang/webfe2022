@@ -1,0 +1,7 @@
+<students>
+	<student sno = "1001" sname = "张三"></student>
+	<student sno = "1002" sname = "张四"></student>
+	<student sno = "1003" sname = "张五"></student>
+	<student sno = "1004" sname = "张六"></student>
+	<student sno = "1005" sname = "张七"></student>
+</students>
