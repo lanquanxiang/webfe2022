@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			let stus=[]
+			function load(){
+				let xhr=new XMLHttpRequest()
+				xhr.open("GET","stu.xml",false)
+				xhr.send()
+				let data=xhr.responseXML
+				//stus=data.getElementsByTagName("student")
+				stus=data.querySelectorAll("student")
+				document.querySelector("input").value=stus[0].getAttribute("sno")
+				document.querySelector("input~input").value=stus[0].getAttribute("sname")
+			}
+			let index=0
+			function fun(){
+				index++
+				index=index%stus.length
+				document.querySelector("input").value=stus[index].getAttribute("sno")
+				document.querySelector("input~input").value=stus[index].getAttribute("sname")
+			}
+		</script>
+	</head>
+	<body onload="load()">
+		学号:<input type="text"/><br>
+		姓名:<input type="text"/><br>
+		<button type="button" onclick="fun()">下一个</button>
+	</body>
+</html>

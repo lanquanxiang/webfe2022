@@ -1,0 +1,14 @@
+<colors>
+	<color>
+		<name>黄色</name>
+		<value>yellow</value>
+	</color>
+	<color>
+		<name>红色</name>
+		<value>rgb(255,0,0)</value>
+	</color>
+	<color>
+		<name>蓝色</name>
+		<value>#0000FF</value>
+	</color>
+</colors>
