@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("button").eq(0).on("click", function() {
+					console.log("按钮可以被点击");
+					$("button").eq(2).on("click", function() {
+						//$("button").eq(2).bind("click", function() {
+						console.log("按钮被点击");
+					})
+				})
+				$("button").eq(1).one("click", function() {
+					console.log("这句话只输出一次");
+					$("button").eq(2).off("click")
+					//$("button").eq(2).unbind("click")
+					console.log("按钮被解绑");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<button type="button">bind</button>
+		<button type="button">one</button>
+		<button type="button">按钮</button>
+	</body>
+
+</html>

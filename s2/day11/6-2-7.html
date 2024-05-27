@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//1.取消第一个√，自动取消第二个
+				//2.勾上第二个，自动勾上第一个
+				$(":checkbox").eq(0).change(function(){
+					if(!$(":checkbox").eq(0).is(":checked")){
+						$(":checkbox").eq(1).prop("checked",false)
+					}
+				})
+				
+				$(":checkbox").eq(1).change(function(){
+					if($(":checkbox").eq(1).is(":checked")){
+						$(":checkbox").eq(0).prop("checked",true)
+					}
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<h3>用户登录</h3>
+		<input type="checkbox" />保存密码
+		<input type="checkbox" />自动登录
+	</body>
+</html>

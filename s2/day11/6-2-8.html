@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.dark{
+				background-color: black;
+				color: white;
+			}
+		</style>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	let dark=false
+		$(function (){
+			$('button').click(function (){
+				//$(document.body).toggleClass('dark')
+				$('button').toggleClass('dark')
+				if(dark){
+					$('button').html('黑暗模式')
+					$(document.body).removeClass('dark')
+					dark=false
+				}else{
+					$('button').html('明亮模式')
+					$(document.body).addClass('dark')
+					dark=true
+				}				
+			})
+			//网页的颜色是红色的
+			$(document.body).css("color","red")
+		})
+	</script>
+	</head>
+	<body>
+		这是网页内容
+		<button style="float: right;" type="button">黑暗模式</button>
+	</body>
+</html>

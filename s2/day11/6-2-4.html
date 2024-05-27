@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("button").click(function(){
+					$("div").eq(0).text("ok");
+					$("#txt").text("okk");
+					$(".txt").html("<b>okkk</b>")
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<button type="button">改变文本</button>
+		<div>文本</div>
+		<div id="txt">文本1</div>
+		<div class="txt">文本2</div>
+		<div class="txt">文本2</div>
+		<div class="txt">文本2</div>
+	</body>
+</html>

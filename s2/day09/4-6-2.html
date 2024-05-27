@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		<script src="../day11/js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<button>1</button>
@@ -16,15 +17,21 @@
 		<button>9</button>
 		<button>10</button>
 		<script type="text/javascript">
-			var buttons=document.querySelectorAll("button")
+			/*var buttons=document.querySelectorAll("button")
 			for (let i = 0; i < buttons.length; i++) {
 				buttons[i].onclick=fun;
 				buttons[i].ondblclick=fun;
 				buttons[i].onmouseenter=fun;				
-			}			
+			}
+				*/		
+			$("button").click(fun).dblclick(fun).mouseenter(fun)	
+						
+						
 			function fun(){
 				console.log(`你${event.type}了按钮${event.target.innerHTML}`);
 			}
+			
+			
 		</script>
 	</body>
 </html>
