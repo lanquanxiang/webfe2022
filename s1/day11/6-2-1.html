@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				console.log($("div:eq(0)").html());
+				console.log($("#d2").html());
+				console.log($("#d2")[0].innerHTML);
+				
+				console.log($(".d3").html());
+				console.log($("div").eq(3).html());
+				console.log($("div").index($("[class]")));
+				$("div").each(function(i,e){
+					//console.log(`索引值为${i}的div的文本是${e.innerHTML}`)
+					console.log(`索引值为${i}的div的文本是${$(e).html()}`)
+				})
+				
+				
+			})
+			
+			
+		</script>
+	</head>
+	<body>
+		<div>1</div>
+		<div id="d2">2</div>
+		<div class="d3">3</div>
+		<div>4</div>
+		
+		
+	</body>
+</html>

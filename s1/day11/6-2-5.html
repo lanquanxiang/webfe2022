@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(":text").change(function(){
+						/*
+					$(":text").eq(2).val(
+						$(":text").eq(0).val()*1+$(":text").eq(1).val()*1
+					)
+					*/
+				   $(":text").eq(2).attr("value",
+				   	$(":text").eq(0).val()*1+$(":text").eq(1).val()*1
+				   )
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<input type="text" placeholder="第一个数"/>+
+		<input type="text" placeholder="第二个数"/>=
+		<input type="text" placeholder="计算结果" disabled="disabled"/>
+	</body>
+</html>
