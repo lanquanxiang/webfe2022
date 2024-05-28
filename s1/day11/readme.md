@@ -39,4 +39,21 @@
 5. 事件绑定
 	bind  unbind one
 	on（在元素生成期间绑定事件）  off
+
+## 3. jQuery操作DOM（增删改查）
+1. 查询
+	使用jQuery选择器
+2. 修改
+	1. 修改文本  d.innerHTML    j.html("新的值")
+	2. 修改纯文本d.innerText		j.text()
+	3. 修改属性 d.setAttribute("属性","属性值") d.getAttribute("属性")
+				j.attr("属性","属性值")   j.attr("属性")
+	4. 修改值  d.value    j.val()
+	5. 修改CSS  d.setAttribute("style","CSS样式")
+			j.css("css样式","css样式值")
+			j.css({CSS样式JSON})
+			j.addClass()  j.removeClass() j.toggleClass();
+	6. 如果修改单选、多选的状态，需要使用prop()
+3. 增加
+4. 删除
 	
