@@ -55,5 +55,7 @@
 			j.addClass()  j.removeClass() j.toggleClass();
 	6. 如果修改单选、多选的状态，需要使用prop()
 3. 增加
+	1. 创建对象 $("<div></div>") 
+	2. 将对象加入到网页中
 4. 删除
 	
