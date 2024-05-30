@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("input").change(function(){
+					$("input:eq(2)").attr("value",
+						$("input:eq(0)").val()*1 + $("input:eq(1)").val()*1
+					)
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<input type="text" placeholder="第一个数">+
+		<input type="text" placeholder="第二个数">=
+		<input type="text" placeholder="计算结果" disabled="disabled">
+	</body>
+</html>

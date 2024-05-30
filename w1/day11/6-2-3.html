@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("button").eq(0).bind("click",function(){
+					console.log("这是匿名函数");
+				})
+				$("button").eq(0).bind("click",fun2)
+				$("button").eq(0).bind("mouseenter",fun3)
+				$("button").eq(1).one("click",function(){
+					// $("button").eq(0).unbind("click",fun1) //解除单击的函数1，不能解除匿名函数
+					//$("button").eq(0).unbind("click") //解除单击的所有函数
+					$("button").eq(0).unbind() //解除所有事件和所有函数
+					console.log("这句话只能看见一次");
+				})
+			})
+			function fun1(){
+				console.log("函数1被执行");
+			}
+			function fun2(){
+				console.log("函数2被执行");
+			}
+			function fun3(){
+				console.log("函数3被执行");
+			}
+		</script>
+	</head>
+	<body>
+		<button>按钮</button>
+		<button>一次性按钮</button>
+	</body>
+</html>

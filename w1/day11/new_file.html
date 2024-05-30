@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<input type="text" id="t1" value="123456" />
+		<br>
+		<button type="button">按钮</button>
+		<input type="checkbox" checked="checked"/>复选框
+		<!-- <input type="checkbox" checked="checked"/>复选框 -->
+		<script type="text/javascript">
+			$("button").click(function(){
+				$(":checkbox").removeAttr("checked")
+			})
+		</script>
+		
+		<div style="color: red;">11111</div>
+		
+	</body>
+</html>
