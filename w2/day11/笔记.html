@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<button type="button" onclick="fun()">按钮</button>
+		<script type="text/javascript">
+		/***************************************/
+			var btn = document.querySelector("button")
+			btn.onclick = fun;
+			
+			$("button").click(fun)
+			$("button").click(function(){
+				
+			})
+			
+			/*************************************/
+			
+			var btn = document.querySelector("button")
+			btn.addEventListener("click",fun);
+			btn.removeEventListener("click",fun);
+			
+			$("button").bind("click",fun)
+			$("button").one("click",fun)  //一次性事件
+			$("button").unbind("click",fun) //解除fun绑定
+			$("button").unbind("click") //解除单击的所有函数
+			$("button").unbind() //解除所有事件
+			
+			$("button").on("click",fun)
+			$("button").off() 
+			
+			
+			
+			
+			function fun(){}
+		</script>
+		
+		<div id="zhangsan" style="color: red;">11111111111111</div>
+		<input type="text" value="123456" />
+		
+	</body>
+</html>

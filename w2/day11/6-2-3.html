@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("button:first").bind("click",function(){
+					console.log("按钮被点击");
+				})
+				$("button:eq(1)").one("click",function(){
+					console.log("这句话只能看见一次,按钮解除绑定");
+					$("button:first").unbind();//解除所有的事件及函数
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<button>绑定</button>
+		<button>解绑</button>
+	</body>
+</html>

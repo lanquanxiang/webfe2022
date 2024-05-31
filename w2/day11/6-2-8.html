@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.black{
+				background-color: #000000;
+				color: white;
+			}
+		</style>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			let black=false
+			/*默认网页颜色为红色，32px*/
+			$(document.body).css({"color":"red","font-size":"32px"})
+			
+			$("button").click(function(){
+				$(document.body).toggleClass("black")
+				if(black==false){
+					$("button").addClass("black")
+					$("button").html("明亮模式")
+					black=true				
+				}
+				else{
+					$("button").removeClass("black")
+					$("button").html("黑暗模式")
+					black=false
+				}
+			})
+		})
+	</script>
+	</head>
+	<body>
+		这是网页内容<button type="button" style="float: right;">黑暗模式</button>
+	</body>
+</html>

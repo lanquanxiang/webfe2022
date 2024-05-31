@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+	<script src="../day11/js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<button>1</button>
@@ -16,11 +17,17 @@
 		<button>9</button>
 		<button type="button">10</button>
 		<script type="text/javascript">
+			/*
 			var btns=document.querySelectorAll("button")
 			for (let i = 0; i < btns.length; i++) {
 				btns[i].addEventListener('click',fun,false)
 				btns[i].addEventListener('mouseenter',fun,false)
 			}
+			*/
+		   
+		   $("button").click(fun).mouseenter(fun)
+		   
+		   
 			function fun(){
 				console.log(`按钮${event.target.innerHTML}被${event.type}了`);
 			}

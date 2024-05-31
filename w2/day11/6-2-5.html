@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(":text").change(function(){
+					let n1=$(":text").eq(0).val()-0
+					let n2=$(":text").eq(1).val()-0
+					$(":text").eq(2).val(n1+n2)
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<input type="text" placeholder="第一个数"/>+
+		<input type="text" placeholder="第二个数"/>=
+		<input type="text" placeholder="计算结果" disabled="disabled"/>
+		
+	</body>
+</html>
