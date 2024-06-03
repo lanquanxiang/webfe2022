@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("button").eq(0).click(function(){
+				$("#d1").fadeOut(1000,function(){
+					console.log("div已经淡出");
+				})
+			})
+			$("button").eq(1).click(function(){
+				$("#d1").fadeIn(200,function(){
+					console.log("div已经淡入");
+				})
+			})
+			$("button").eq(2).click(function(){
+				$("#d1").fadeTo(1000,0.1,function(){
+					console.log("div透明度已经设置为0.1");
+				})
+			})
+		})
+	</script>
+	</head>
+	<body>
+		<button>淡出</button>
+		<button>淡入</button>
+		<button>淡入淡出到0.1</button>
+		<div id="d1" style="width: 200px;height: 200px;background-color: yellow;"></div>
+	</body>
+</html>

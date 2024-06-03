@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			ul ul{
+				display: none;
+			}
+		</style>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".frist>li").mouseenter(function(){
+					$(".frist>li>ul").slideDown(1000)
+				}).mouseout(function(){
+					$(".frist>li>ul").slideUp(1000)
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<ul class="frist">
+			<li>数计学院
+				<ul>
+					<li>软件工程</li>
+					<li>网络工程</li>
+					<li>计算机</li>
+				</ul>
+			</li>
+			<li>土建学院</li>
+			<li>其他学院</li>
+		</ul>
+	</body>
+</html>

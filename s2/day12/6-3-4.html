@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		img{
+			position: relative;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			$("button").eq(0).click(function(){
+				$("img").animate({"left":"0px","width":"100px"},function(){
+						$("img").css("transform","rotateY(0deg)")
+				}).animate({"left":"300px","width":"300px"},1000,function(){
+						$("img").css("transform","rotateY(180deg)")
+				}).animate({"left":"0px","width":"100px"},1000,function(){
+						$("img").css("transform","rotateY(0deg)")
+				})
+			})
+			$("button").eq(1).click(function(){
+				$("img").stop(true);
+				//$("img").stop(true,true);
+			})
+		})
+	</script>
+	<body>
+		<button type="button">开始动画</button>
+		<button type="button">停止动画</button><br>
+		<img src="img/fish.png" alt="" width="100px" >
+	</body>
+</html>
