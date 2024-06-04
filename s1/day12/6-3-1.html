@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("button").eq(0).click(function() {
+					$("div").hide(1000, function() {
+						console.log("div已经隐藏");
+					})
+				})
+				$("button").eq(1).click(function() {
+					$("div").show(1000, function() {
+						console.log("div已经显示");
+					})
+				})
+				$("button").eq(2).click(function() {
+					$("div").toggle(1000, function() {
+						console.log("div状态已经切换");
+					})
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<button>隐藏</button>
+		<button>显示</button>
+		<button>切换</button>
+		<div style="width: 200px;height: 200px;background-color: red;"></div>
+	</body>
+</html>
