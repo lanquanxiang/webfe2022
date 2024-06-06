@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+			}
+		</style>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function (){
+				$("button").eq(0).click(function (){
+					$("div").slideUp(5000,function (){
+						console.log("div已经划出")
+					})
+				})
+				$("button").eq(1).click(function (){
+					$("div").slideDown(5000,function (){
+						console.log("div已经划入")
+					})
+				})
+				$("button").eq(2).click(function (){
+					$("div").slideToggle(5000,function (){
+						console.log("div已经切换")
+					})
+				})
+			})
+			
+		</script>
+	</head>
+	<body>
+		<button>划出</button>
+		<button>划入</button>
+		<button>切换</button>
+		<div></div>
+	</body>
+</html>

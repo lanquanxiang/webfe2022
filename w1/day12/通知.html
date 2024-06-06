@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				height: 50px;
+				background-color: gray;
+				line-height: 50px;
+				text-align: center;
+			}
+			div+div{
+				background-color: skyblue;
+				height: 100px;
+				display: none;
+			}
+		</style>
+		<script src="js/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("div:first").mouseenter(function(){
+					$("div+div").stop(true).slideDown(1000)
+				}).mouseout(function(){
+					$("div+div").stop(true).slideUp(1000)
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div>通知</div>
+		<div>这是通知的具体内容这是通知的具体内容这是通知的</div>
+	</body>
+</html>
